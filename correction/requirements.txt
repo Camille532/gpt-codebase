@@ -1,0 +1,6 @@
+numpy
+pandas>=2.0
+matplotlib
+# Only for Excel .xlsx input:
+openpyxl
+# FES2022 mode only (not needed for UHSLC observed tides): eo-tides
