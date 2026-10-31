@@ -1,0 +1,48 @@
+{
+  "_说明": "越南芹椰。新站点复制本文件后修改；以下划线开头的键只是注释。",
+  "site_name": "越南芹椰",
+  "prefix": "cg_",
+  "asset_root": "projects/mangrove-494808/assets/",
+  "_asset_root": "改成你自己的GEE资产目录（Assets面板里能看到），末尾保留 /",
+  "aoi": [
+    106.43,
+    10.28,
+    107.36,
+    10.94
+  ],
+  "_aoi": "研究区矩形 [西, 南, 东, 北]（经纬度），把整片红树林和外侧潮滩都包进去，四周留1–2 km",
+  "bay_seed": [
+    107.07,
+    10.34
+  ],
+  "_bay_seed": "一个落在开阔海面上的点（经度, 纬度），用来判断哪些潮滩与外海连通",
+  "shore_split": {
+    "axis": "longitude",
+    "value": 106.83
+  },
+  "_shore_split": "把红树林分成两侧做分层采样：axis 填 latitude 或 longitude，value 为分界线",
+  "years": [
+    2019,
+    2024
+  ],
+  "ndvi_min": 0.45,
+  "_ndvi_min": "红树林像元全年NDVI中位数下限；低矮或稀疏的红树林可适当调低到0.35–0.4",
+  "connect_max_m": 4000,
+  "open_water_core_m": 250,
+  "tide": {
+    "source": "uhslc_file",
+    "file": "inputs/h383 (1).csv",
+    "max_gap_minutes": 90
+  },
+  "_tide": "file相对站点work_dir=cangio；无表头5列：年、月、日、UTC小时、毫米潮位；-32767缺测。保留UHSLC站点零点，不施加FES时差。",
+  "min_valid": 0.6,
+  "strict_valid": 0.8,
+  "high_tide_threshold_m": null,
+  "_high_tide_threshold_m": "站点零点与原MSL不同，未提供同基准阈值时跳过绝对高潮阈值模型；连续潮位模型不变。",
+  "bootstrap_B": 1999,
+  "change_sim": {
+    "early_end": 2020,
+    "late_start": 2023
+  },
+  "work_dir": "cangio"
+}
